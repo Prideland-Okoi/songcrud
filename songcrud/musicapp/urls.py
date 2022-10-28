@@ -5,10 +5,10 @@ app_name = 'musicapp'
 
 urlpatterns = [
         path("", views.index, name = 'musicapp'),
-        path("", views.albumsstoreview, name = 'albums-store'),
-        path("", views.blogview, name = 'blog'),
-        path("", views.contactview, name = 'contact'),
-        path("", views.elementsview, name = 'elements'),
-        path("", views.eventview, name = 'event'),
-        path("", views.login, name = 'login'),
+        path('musicapp/albums-store/', views.albumsstore, name = 'albums-store'),
+        path('musicapp/blog/', views.blog, name = 'blog'),
+        path('musicapp/contact/', views.contact, name = 'contact'),
+        path('musicapp/elements/', views.elements, name = 'elements'),
+        path('musicapp/event/', views.event, name = 'event'),
+        path('musicapp/login/', views.login, name = 'login'),
 ]
