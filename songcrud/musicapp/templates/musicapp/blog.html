@@ -236,7 +236,7 @@
                             <div class="widget-content">
                                 <ul>
                                     <li><a href="#">Music</a></li>
-                                    <li><a href="#">Events &amp; Press</a></li>
+                                    <li><a href="{% url 'musicapp:event' %}">Events &amp; Press</a></li>
                                     <li><a href="#">Festivals</a></li>
                                     <li><a href="#">Lyfestyle</a></li>
                                     <li><a href="#">Uncategorized</a></li>
@@ -268,7 +268,7 @@
                             <div class="widget-content">
                                 <ul class="tags">
                                     <li><a href="#">music</a></li>
-                                    <li><a href="#">events</a></li>
+                                    <li><a href="{% url 'musicapp:event' %}">Events</a></li>
                                     <li><a href="#">artists</a></li>
                                     <li><a href="#">press</a></li>
                                     <li><a href="#">mp3</a></li>
@@ -360,11 +360,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                 <div class="col-12 col-md-6">
                     <div class="footer-nav">
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Albums</a></li>
-                            <li><a href="#">Events</a></li>
-                            <li><a href="#">News</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="{% url 'musicapp:musicapp' %}">Home</a></li>
+                            <li><a href="{% url 'musicapp:albums-store' %}">Albums</a></li>
+                            <li><a href="{% url 'musicapp:event' %}">Events</a></li>
+                            <li><a href="{% url 'musicapp:blog' %}">News</a></li>
+                            <li><a href="{% url 'musicapp:contact' %}">Contact</a></li>
                         </ul>
                     </div>
                 </div>

@@ -21,6 +21,7 @@
 </head>
 
 <body>
+
     <!-- Preloader -->
     <div class="preloader d-flex align-items-center justify-content-center">
         <div class="lds-ellipsis">
@@ -119,6 +120,10 @@
 
     <!-- ##### Breadcumb Area Start ##### -->
     <section class="breadcumb-area bg-img bg-overlay" style="background-image: url(img/bg-img/breadcumb3.jpg);">
+      <!-- Newsletter Alert Area -->
+      {% for message in messages %}
+    <div class="alert alert-success">{{message}}</div>
+    {% endfor %}
         <div class="bradcumbContent">
             <p>See what’s new</p>
             <h2>Events</h2>
@@ -302,7 +307,8 @@
         <div class="container">
             <div class="row">
 
-                <!-- Newsletter Area -->
+
+<!-- Newsletter Area -->
                 <div class="col-12 col-lg-6">
                     <div class="newsletter-area mb-100">
                         <div class="section-heading text-left mb-50">
@@ -310,8 +316,9 @@
                             <h2>Subscribe to newsletter</h2>
                         </div>
                         <div class="newsletter-form">
-                            <form action="#">
-                                <input type="search" name="search" id="newsletterSearch" placeholder="E-mail">
+                            <form action="{% url 'musicapp:event' %}" method="POST">
+                              {% csrf_token %}
+                                <input type="search" name="email" id="newsletterSearch" placeholder="E-mail">
                                 <button type="submit" class="btn oneMusic-btn">Subscribe <i class="fa fa-angle-double-right"></i></button>
                             </form>
                         </div>
@@ -372,21 +379,22 @@
                 <div class="col-12">
                     <!-- Contact Form Area -->
                     <div class="contact-form-area">
-                        <form action="#" method="post">
+                        <form action="{#}" method="post">
+                          {% csrf_token %}
                             <div class="row">
                                 <div class="col-md-6 col-lg-4">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="name" placeholder="Name">
+                                        <input type="text" name="fl_name" class="form-control" id="name" placeholder="Name">
                                     </div>
                                 </div>
                                 <div class="col-md-6 col-lg-4">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" id="email" placeholder="E-mail">
+                                        <input type="email" name="email_address" class="form-control" id="email" placeholder="E-mail">
                                     </div>
                                 </div>
                                 <div class="col-lg-4">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" id="subject" placeholder="Subject">
+                                        <input type="text" name="subject_title" class="form-control" id="subject" placeholder="Subject">
                                     </div>
                                 </div>
                                 <div class="col-12">
@@ -420,11 +428,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                 <div class="col-12 col-md-6">
                     <div class="footer-nav">
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Albums</a></li>
-                            <li><a href="#">Events</a></li>
-                            <li><a href="#">News</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="{% url 'musicapp:musicapp' %}">Home</a></li>
+                            <li><a href="{% url 'musicapp:albums-store' %}">Albums</a></li>
+                            <li><a href="{% url 'musicapp:event' %}">Events</a></li>
+                            <li><a href="{% url 'musicapp:blog' %}">News</a></li>
+                            <li><a href="{% url 'musicapp:contact' %}">Contact</a></li>
                         </ul>
                     </div>
                 </div>

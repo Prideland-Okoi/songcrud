@@ -25,12 +25,12 @@ class ContactForm(forms.Form):
     fl_name = forms.CharField(max_length = 50)
     email_address = forms.EmailField(max_length = 150)
     subject_title = forms.CharField(widget = forms.Textarea, max_length = 100)
-    message_detail = forms.CharField(widget = forms.Textarea, max_length = 2000)
+    message = forms.CharField(widget = forms.Textarea, max_length = 2000)
 
 class SubscribersForm(forms.ModelForm):
     class Meta:
         model = Subscribers
-        fields = ['firstname','email',]
+        fields = ['email',]
         #fields ='__all__'
 
 class AdminMailMessageForm(forms.ModelForm):

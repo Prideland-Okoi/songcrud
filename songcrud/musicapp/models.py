@@ -39,17 +39,17 @@ class ContactModel(models.Model):
     fl_name = models.CharField(max_length=100, null=True)
     email_address = models.EmailField(max_length = 150)
     subject_title = models.TextField(null=True)
-    message_detail = models.TextField(null=True)
+    message = models.TextField(null=True)
 
     def __str__(self):
         return self.fl-fl_name
 class Subscribers(models.Model):
-    firstname = models.CharField(max_length=100, null=True)
+    #firstname = models.CharField(max_length=100, null=True)
     email = models.EmailField(null=True)
     date = models.DateTimeField(auto_now_add=True)
-
     def __str__(self):
         return self.email
+
 class AdminMailMessage(models.Model):
     title = models.CharField(max_length=100, null=True)
     message = models.TextField(null=True)

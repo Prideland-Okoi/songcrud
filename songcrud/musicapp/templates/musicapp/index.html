@@ -99,7 +99,6 @@
                                     <div class="login-register-btn mr-50">
                                         <a href="{% url 'musicapp:login' %}" id="loginBtn">Login / Register</a>
                                     </div>
-
                                     <!-- Cart Button -->
                                     <div class="cart-btn">
                                         <p><span class="icon-shopping-cart"></span> <span class="quantity">1</span></p>
@@ -122,7 +121,7 @@
             <!-- Single Hero Slide -->
             <div class="single-hero-slide d-flex align-items-center justify-content-center">
                 <!-- Slide Img -->
-                <div class="slide-img bg-img" style="background-image: url({% static './img/bg-img/bg-1.jpg);'%}"></div>
+                <div class="slide-img bg-img" style="background-image: url({% static './img/bg-img/bg-1.jpg);' %}"></div>
                 <!-- Slide Content -->
                 <div class="container">
                     <div class="row">
@@ -862,11 +861,11 @@ Copyright &copy;<script>document.write(new Date().getFullYear());</script> All r
                 <div class="col-12 col-md-6">
                     <div class="footer-nav">
                         <ul>
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Albums</a></li>
-                            <li><a href="#">Events</a></li>
-                            <li><a href="#">News</a></li>
-                            <li><a href="#">Contact</a></li>
+                            <li><a href="{% url 'musicapp:musicapp' %}">Home</a></li>
+                            <li><a href="{% url 'musicapp:albums-store' %}">Albums</a></li>
+                            <li><a href="{% url 'musicapp:event' %}">Events</a></li>
+                            <li><a href="{% url 'musicapp:blog' %}">News</a></li>
+                            <li><a href="{% url 'musicapp:contact' %}">Contact</a></li>
                         </ul>
                     </div>
                 </div>

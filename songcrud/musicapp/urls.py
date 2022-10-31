@@ -11,4 +11,5 @@ urlpatterns = [
         path('musicapp/elements/', views.elements, name = 'elements'),
         path('musicapp/event/', views.event, name = 'event'),
         path('musicapp/login/', views.login, name = 'login'),
+        path('musicapp/signup', views.signup, name = 'signup')
 ]
