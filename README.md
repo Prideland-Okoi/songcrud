@@ -18,6 +18,3 @@ Note: Always create a virtual environment anytime you're working on a new Django
 |a|pip install `dependencies of your choice`|
 |b|`pip freeze > requirements.txt` to list dependencies in a file|
 |c|add .gitignore file to include the word `virtual-environment-name` to avoid pushing it to your version control system|
-
-# Material
-github.com/technext

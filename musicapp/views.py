@@ -1,9 +1,7 @@
 from rest_framework import viewsets
-
 from musicapp.serializers import ArtisteSerilizer
-
-from .models import *
-from .serializers import *
+from .models import Artiste, Lyric, Song
+from .serializers import ArtisteSerilizer, SongSerilizer, LyricSerilizer
 
 
 class ArtisteViewSet(viewsets.ModelViewSet):

@@ -1,24 +1,16 @@
 from django.contrib import admin
-
-from .models import *
+from .models import Artiste, Song, Lyric
 
 # Register your models here.
-
-
-
 class SongItemInline(admin.TabularInline):
     model = Song
     raw_id_fields = ['artiste']
-
-
-
 
 
 class ArtisteAdmin(admin.ModelAdmin):
     search_fields = ['id', 'first_name', 'last_name', 'age']
     list_display = ['first_name', 'last_name', 'age']
     inlines = [SongItemInline]
-
 
 
 class SongAdmin(admin.ModelAdmin):
@@ -29,7 +21,7 @@ class SongAdmin(admin.ModelAdmin):
 class LyricAdmin(admin.ModelAdmin):
     search_fields = ['song_id', 'artiste']
     list_display = ['song_id', 'artiste']
-
+    
 
 admin.site.register (Artiste, ArtisteAdmin)
 admin.site.register (Song, SongAdmin)
