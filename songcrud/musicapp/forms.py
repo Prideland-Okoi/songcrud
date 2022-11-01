@@ -10,7 +10,7 @@ class ArtisteForm(forms.ModelForm):
 class SongForm(forms.ModelForm):
     class Meta:
         model = Song
-        fields = ['title','date_released']
+        fields = ['Artiste','title','date_released']
 
 #needs to link this count to the likes in song.models
 #class LikeCounterForm(forms.Forms):
